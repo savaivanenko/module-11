@@ -1,0 +1,37 @@
+.foot{
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-base;
+  font-size: 14px;
+}
+.foot a{
+  text-decoration: none;
+  color: #f38181;
+}
+.form{
+  display: flex;
+  input{
+    width: 230px;
+    height: 40px;
+    font-family: $font-roboto;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 300;
+    outline: none;
+    padding-left: 15px;
+    border: solid 1px rgb(231, 231, 231);
+  }
+  button{
+    border: none;
+    background: #95e1d3;
+    font-family: $font-base;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 150px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,105 @@
+header{
+  background-size: cover;
+  background-image: linear-gradient( 360deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../images/banner-1.jpg);
+  padding-bottom: 230px;
+}
+@media (min-resolution: 192dpi){
+  .header{
+    background-image: linear-gradient( 360deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../images/banner@2x.jpg);
+  }
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 22px;
+  position: relative;
+  margin-bottom: 80px;
+  a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: $font-base; 
+    padding-bottom: 12px;
+  }
+}
+.logo{
+  font-weight: 700;
+  font-size: 30px;  
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.menu__item{
+  margin-left: 50px;
+}
+.menu a::after{
+  content: "";
+  display: block;
+  height: 3px;
+  background-color:  #fce38a;
+  margin-top: 12px;
+  opacity:0;
+  visibility: hidden;  
+  transition: 0.2s linear;
+}
+.menu a{
+  text-transform: uppercase;
+  transition: 0.2s linear;
+}
+.menu a:hover{
+  color: #fce38a;
+  transition: 0.2s linear;
+}
+.menu a:hover::after{
+  visibility: visible;
+  opacity:1;
+  transition: 0.2s linear;
+}  
+.menu-btn{
+  display: flex;
+  padding-left: 0;
+}
+.menu-btn__list:not(:last-child){
+  padding-right: 30px;
+}
+.menu-btn__button{
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.menu-btn__svg{
+    width: 20px;
+    height: 20px;
+    fill: rgb(255, 255, 255);
+}
+.menu-btn__svg:hover{
+   fill: #fce38a;
+}
+.header__head{
+  font-family: $font-base;
+  font-size: 150px;
+  font-weight: bold;
+  width: min-content;
+  margin: 0 auto 65px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.header__linklearn {
+  font-size: 14px;
+  font-family: $font-base;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  width: 156px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px;
+  text-decoration: none; 
+}

@@ -1,0 +1,77 @@
+.section__head{
+  font-family: $font-base;
+  margin: 0 auto; 
+  width: max-content;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 42px;
+}
+.italic-header{
+  font-family: $font-italic;
+  font-size: 72px;
+}
+.italic{
+  font-family: $font-italic;
+  font-size: 24px;
+  text-transform: none;
+  display: block;
+}
+.section__head::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background:rgb(243, 129, 129);
+  margin: 34px auto 62px;
+}
+.services{
+  padding-top: 38px;
+}
+.services__list{
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services__card{
+  display: flex;
+  flex-wrap: wrap;
+  &:hover{
+    .services__svg{
+      fill: orange;
+      transform: scale(1.1);
+    }
+  }
+}
+.services__svg{
+  width:32px;
+  height: 32px;
+  padding-right: 25px;
+  fill: #95e1d3;
+  transition: all .2s ease-in-out;
+  box-sizing: content-box;
+}
+.services__card{
+  width: 382px;
+  margin-bottom: 98px;
+  background-size: 10%;
+  transition: background-size 0.2s ease-in;  
+  background-repeat: no-repeat;
+  background-position: left 20px top;
+  h3{
+    font-family: $font-base;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin:0 0 20px 0;
+    color: #333333;
+  }
+  p{
+    font-family: $font-roboto;
+    font-size: 15px;
+    color: $color-base;
+    margin-left: 58px;
+  }
+}

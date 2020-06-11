@@ -1,0 +1,108 @@
+.team{
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  h2+p{
+    font-family: $font-base;
+    color: $color-base;
+    width: 78%;
+    margin: 0 auto 72px;
+    text-align: center;
+  }
+}
+.team__list{
+  display: flex;
+  justify-content: space-between;
+}
+.team__item{
+  h4{
+   font-family: $font-base;
+   font-size: 14px;
+   font-weight: normal;
+   color: #333333; 
+   padding-bottom: 10px;
+   width: max-content;
+   margin: 0 auto;
+   text-transform: uppercase;
+  }
+  h4+p{
+    width: max-content;
+    margin: 0 auto;
+    font-family: $font-roboto;
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+.team__wrapteamcard{
+  position: relative;
+  margin-bottom: 28px;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( 90deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%);
+  visibility: hidden;
+  transform: translate(0px,0px);
+  transition: 0.2s linear;
+}
+.overlay__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}  
+.overlay__item{
+  padding: 1px;  
+  width: 56px;
+  height: 56px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fce38a;
+  a{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 56px;
+  }
+  &:not(:last-child){
+    border-right: solid 1px #f38181;
+  }
+  &:hover{
+    background-color: #f38181;
+    a{
+      cursor: pointer;
+      .team__svg{
+        background-color: #f38181;
+        transition: 0.2s linear; 
+        opacity: 1;
+        fill: white;
+      }
+    }
+  }
+}
+.team__svg{
+  margin: 0 auto;
+  width:28px;
+  height: 28px;
+  fill:#f38181;
+  vertical-align: middle;
+}
+.team__foto{
+  transform: translate(0px,0px);
+  transition: 0.2s linear;
+}
+.team__wrapteamcard:hover{
+  .overlay{
+    visibility: visible;
+    box-shadow: 10px 10px 0 0 #95e1d3;
+    transform: translate(-10px,-10px);
+    transition: 0.2s linear;
+  }
+  .team__foto{
+    transform: translate(-10px,-10px);
+    transition: 0.2s linear;
+  }
+}
